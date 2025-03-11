@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Blog Personal</title>
+    <audio id="background-audio">
+        <source src="Audio/Inicio.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var audio = document.getElementById("background-audio");
+    
+            if (!sessionStorage.getItem("audioPlayed")) {
+                var playPromise = audio.play();
+    
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log("Reproducción automática iniciada.");
+                        sessionStorage.setItem("audioPlayed", "true"); 
+                    }).catch(error => {
+                        console.log("Reproducción automática bloqueada. Intentando con interacción.");
+                        document.body.addEventListener("click", () => {
+                            audio.play();
+                            sessionStorage.setItem("audioPlayed", "true");
+                        }, { once: true });
+                    });
+                }
+            }
+        });
+    </script>
+    
+    
+</head>
+<body>
+    <header class="menu">
+        <h1>Práctica 3 Blog Personal</h1>
+        <nav>
+            
+            <div class="menu-item dropdown">
+                <button class="menu-button">Creadores</button>
+                <div class="dropdown-content">
+                    <a href="Blog_Daniela.html">Daniela</a>
+                    <a href="Blog_Armando.html">Armando</a>
+                    <a href="Blog_Brayan.html">Brayan</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <a href="Contactato.html" class="menu-button">Contáctanos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            
+            <h1>Bienvenidos a Nuestro Blog </h1>
+            <p>
+                Este blog ha sido creado con el objetivo de compartir experiencias, 
+                conocimientos y proyectos de los integrantes 
+                de nuestro equipo: Daniela, Armando y Brayan. Somos un grupo de 
+                estudiantes apasionados por la tecnología, 
+                el aprendizaje continuo y la creatividad.
+            </p>
+            <p>
+                Aquí podrás conocer más sobre cada uno de nosotros, explorar nuestros 
+                intereses y descubrir algunos de los proyectos 
+                en los que hemos trabajado. También compartiremos contenido sobre 
+                programación, tecnología, música, series favoritas 
+                y otros temas que nos inspiran.
+            </p>
+        </section>
+
+        <section>
+            <h2>Presentación en Video</h2>
+            <p>Conoce más sobre nuestro equipo y los temas que abordaremos en este video 
+                introductorio.</p>
+            <div>
+                <video width="320" height="240" controls>
+                    <source src="vid/Equipo.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blog Personal. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

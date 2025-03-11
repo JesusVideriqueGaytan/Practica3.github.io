@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="Blog_Brayan.css">
+    <script>
+        function toggleLyrics() {
+            var lyrics = document.getElementById("lyrics");
+            var button = document.getElementById("toggleButton");
+            if (lyrics.style.display === "none") {
+                lyrics.style.display = "block";
+                button.textContent = "Ocultar letra"; 
+            } else {
+                lyrics.style.display = "none";
+                button.textContent = "Ver letra"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Mi Blog</h1>
+    <div class="content">
+        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/01/evangelion-evas.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="c" class="image">
+
+        <div class="video-section" style="margin-top: 30px;">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy Brayan Jesús Viderique Gaytán, un joven de 21 años apasionado 
+            por la tecnología y el aprendizaje constante. 
+            Actualmente, estudio Ingeniería en Sistemas Computacionales en el 
+            Instituto Tecnológico de México. Me encanta leer, especialmente 
+            ciencia ficción y novelas de misterio. 
+            La música es una parte fundamental de mi vida, disfruto desde el 
+            rock alternativo hasta el jazz más relajante. 
+            Mi serie favorita es <strong>Neon Genesis Evangelion</strong>, cuya 
+            complejidad y profundidad filosófica siempre me han fascinado.
+        </p>
+        <p>
+            Mi curiosidad me ha llevado a explorar el mundo de la programación, 
+            donde encuentro un sinfín de posibilidades creativas. 
+            Me gusta desarrollar proyectos personales, desde pequeñas aplicaciones 
+            web hasta programas más complejos. 
+            Mi objetivo es combinar mi creatividad con mis habilidades técnicas 
+            para aportar soluciones innovadoras y funcionales.
+        </p>
+            <video controls width="600">
+                <source src="vid/Video_Brayan.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        
+        <!-- Reproductor de música y botón para ver la letra -->
+        <div class="audio-section">
+            <h2>Una de mis canciones favoritas</h2> <br><br>
+            <audio controls>
+                <source src="Audio/宇多田ヒカル『One Last Kiss』.mp3" type="audio/mp3"> 
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <button id="toggleButton" onclick="toggleLyrics()">Ver letra</button>
+        </div>
+
+        <div id="lyrics" style="display: none; margin-top: 20px;">
+            <p><strong>Un Último Beso</strong></p>
+            <p>Es mi primera vez en el Museo de Louvre</p>
+            <p>No me sorprendió</p>
+            <p>Ya que hace mucho yo ya había encontrado a mi mona lisa</p>
+            <p>Y desde hace un tiempo</p>
+            <p>Cuando te vi por primera vez</p>
+            <p>Los engranajes de mi corazón empezaron a moverse</p>
+            <p>Pero presentía una pérdida inevitable</p>
+
+            <p>Aunque nos hemos besado innumerables veces</p>
+            <p>Por favor bésame una vez más</p>
+            <p>¿Puedes darme un último beso?</p>
+            <p>Es algo que no quiero olvidar</p>
+
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Es algo que no quiero olvidar</p>
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Te amo más de lo que nunca sabrás</p>
+
+            <p>No me gusta tomarme fotos</p>
+            <p>Eso fue lo que dijiste pero de todos modos no las necesito</p>
+            <p>Ya estás grabado</p>
+            <p>En el proyector de mi corazón</p>
+            <p>Fingí no sentirme sola</p>
+            <p>Bueno, creo que ambos lo hacemos</p>
+            <p>Buscaba a alguien, bueno diciéndolo de otra manera</p>
+            <p>Buscaba ser lastimada por alguien más</p>
+
+            <p>Oh, ¿puedes darme un último beso?</p>
+            <p>Que sea un beso inolvidable</p>
+            <p>Quiero olvidarlo</p>
+            <p>Pero no puedo</p>
+
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Te amo más de lo que nunca sabrás</p>
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Te amo más de lo que nunca sabrás</p>
+
+            <p>Realmente entiendo</p>
+            <p>Que incluso hasta el final de los tiempos</p>
+            <p>Que incluso cuando sea mayor</p>
+            <p>Eres alguien inolvidable</p>
+
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Eres alguien inolvidable</p>
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Te amo más de lo que nunca sabrás</p>
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Eres alguien inolvidable</p>
+            <p>Oh, oh, oh, oh, oh</p>
+            <p>Te amo más de lo que nunca sabrás</p>
+
+            <p>Después de que el viento sople</p>
+            <p>Aún perseguiré ese día</p>
+        </div>
+
+        <a href="index.html">
+            <button>Volver al Menú</button>
+        </a>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1AYDFk8gKV/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
+            </a>
+            
+            <a href="https://github.com/JesusVideriqueGaytan" target="_blank">
+                <img src="https://th.bing.com/th/id/OIP.eoZPB2gfGH-1ckaL_JSZdwHaHg?rs=1&pid=ImgDetMain" alt="Github">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
